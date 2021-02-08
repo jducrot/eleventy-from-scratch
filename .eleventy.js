@@ -13,7 +13,7 @@ module.exports = (config) => {
   config.addCollection("featuredWork", (collection) => {
     return sortByDisplayOrder(
       collection.getFilteredByGlob("./src/work/*.md")
-    ).filter((x) => x.data.featured);
+    ).filter(x => x.data.featured);
   });
 
   return {
